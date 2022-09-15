@@ -2,6 +2,14 @@
 /*--------------------------------------------------------------------- import Fonts ---------------------------------------------------------------------*/
  @import url('https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700');
  @import url('https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+@font-face {
+  font-family: roadRageFont;
+  src: url('../fonts/road_rage.ttf');
+}
+@font-face {
+  font-family: rhinoRocksFont;
+  src: url('../fonts/rhinos_rocks.ttf');
+}
 /*****---------------------------------------- 1) font-family: 'Rajdhani', sans-serif;
  2) font-family: 'Poppins', sans-serif;
  ----------------------------------------*****/
@@ -46,25 +54,26 @@
      font-weight: normal;
      line-height: normal;
      color: #111111;
-     margin: 0 
+     margin: 0
 }
  h1 {
-     font-size: 24px 
+     font-family: roadRageFont;
+     font-size: 24px
 }
  h2 {
-     font-size: 22px 
+     font-size: 22px
 }
  h3 {
-     font-size: 18px 
+     font-size: 18px
 }
  h4 {
-     font-size: 16px 
+     font-size: 16px
 }
  h5 {
-     font-size: 14px 
+     font-size: 14px
 }
  h6 {
-     font-size: 13px 
+     font-size: 13px
 }
  *, *::after, *::before {
      -webkit-box-sizing: border-box;
@@ -74,7 +83,7 @@
  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
      color: #212121;
      text-decoration: none!important;
-     opacity: 1 
+     opacity: 1
 }
  button:focus {
      outline: none;
@@ -213,7 +222,7 @@
      color: #114c7d;
      font-weight: 400;
      font-size: 28px;
-     background-image: url('../images/fevicon.png');
+     background-image: url('../images/favicon.png');
      background-repeat: no-repeat;
      padding-left: 55px;
      letter-spacing: -0.5px;
@@ -355,7 +364,7 @@
      margin-left: 0;
 }
 
- 
+
  .right_cart_section {
      float: right;
      width: auto;
@@ -833,7 +842,7 @@
 }
 .menu-area-main li.active a {
      color: #fff;
-     background: #0ed1f0;
+     background: #000000;
      border-radius: 17px;
      }
 
@@ -862,7 +871,7 @@
 
  .main-menu ul>li a:hover {
 color: #fff;
-background: #0ed1f0;
+background: #000000;
 border-radius: 17px;
 transition: all 0.3s ease-in;
  }
@@ -891,7 +900,7 @@ transition: all 0.3s ease-in;
 }
  .main-menu ul li:first-child {
      margin-left: 0;
-    
+
 }
  .main-menu ul>li>ul {
      opacity: 0;
@@ -969,13 +978,13 @@ transition: all 0.3s ease-in;
  .padding_left0 {
     padding-left: 0px;
 }
- 
+
  .header-top {
-     background:url(../images/banner2.jpg);
+     background:url(../images/banner.jpg);
      background-size: 100% 100%;
      background-repeat: no-repeat;
      padding-bottom: 50px;
-    
+
      min-height: 980px;
 }
  .header {
@@ -996,9 +1005,12 @@ transition: all 0.3s ease-in;
 }
  .text-bg {text-align: center;}
   .text-bg span {
+    font-family: rhinoRocksFont;
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
      font-size: 80px;
 line-height: 80px;
-color: #0fc9da;
+color: #fff;
 text-transform: uppercase;
   }
  .text-bg h1 {
@@ -1009,6 +1021,8 @@ line-height: 85px;
 padding-bottom: 40px;
 text-transform: uppercase;
 font-weight: bold;
+   -webkit-text-stroke-width: 0.5px;
+   -webkit-text-stroke-color: black;
 }
  .text-bg p {
     font-size: 17px;
@@ -1034,7 +1048,7 @@ transition: ease all 0.5s;
  .text-bg a:hover {
      background-color: #0ed1f0;
     color: #fff;
-    transition: ease all 0.5s;          
+    transition: ease all 0.5s;
 }
  .text {
      position: inherit;
@@ -1043,7 +1057,7 @@ transition: ease all 0.5s;
      width: 100%;
      bottom: auto;
      padding: 0;
-     margin-top: 90px 
+     margin-top: 90px
 }
  .img_bg {
      text-align: center;
@@ -1112,7 +1126,7 @@ transition: ease all 0.5s;
     box-shadow: #000 0px 0px 7px -3px;
 
 }
- 
+
 .carousel-control-next, .carousel-control-prev {
     bottom: -63%;
      top: inherit;
@@ -1128,13 +1142,23 @@ transition: ease all 0.5s;
 
 /** about section **/
  .about {
-     background:url(../images/about_bg.jpg);
+     background:url(../images/about_bg.png);
     background-repeat: no-repeat;
 background-size: cover;
 background-position: center;
 padding: 110px 0;
 margin-top: 90px;
-     
+
+}
+
+.about-detail {
+  background:url(../images/about-detail-bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 110px 0;
+  margin-top: 90px;
+
 }
 
 .display_boxflex {
@@ -1145,7 +1169,7 @@ margin-top: 90px;
 }
  .about .about-box {
     text-align: left;
-    
+
 }
  .about .about-box h2 {
      padding: 0;
@@ -1175,7 +1199,7 @@ border-radius: 30px;
  }
 
 
- .about .about-box a:hover{ 
+ .about .about-box a:hover{
      background-color: #0ed1f0;
      border: #0ed1f0 solid 1px;
     color: #fff;
@@ -1193,7 +1217,7 @@ border-radius: 30px;
      padding-top: 90px;
      background: #fff;
 }
- 
+
  .box_text {
      max-width: 415px;
      width: 100%;
@@ -1203,7 +1227,7 @@ border-radius: 30px;
 
 
 .box_text .titlepage {
-     padding-bottom: 20px; 
+     padding-bottom: 20px;
      text-align: left;
 }
  .box_text p {
@@ -1251,7 +1275,7 @@ margin-top: 90px;
 }
 
 .Gallery_text .titlepage {
-     padding-bottom: 20px; 
+     padding-bottom: 20px;
      text-align: right;
 }
  .Gallery_text p {
@@ -1260,7 +1284,7 @@ margin-top: 90px;
      font-weight: 400;
      text-align: right;
      color: #181716;
-    
+
 }
  .Gallery_text a {
     font-size: 16px;
@@ -1405,7 +1429,7 @@ text-align: left;
 font-weight: 500;
 padding-bottom: 20px;
 }
- 
+
  .footer .address h3 {
      color: #fff;
 font-size: 30px;
@@ -1420,7 +1444,7 @@ padding-bottom: 20px;
      padding: 20px 35px;
 }
 
-.border_top {border-top: #ddd solid 1px;} 
+.border_top {border-top: #ddd solid 1px;}
  .news {
     padding: 35px 0px 50px 0px;
 max-width: 71%;
@@ -1463,13 +1487,13 @@ ul.loca {
     flex-wrap: wrap;
 }
 
- 
- 
+
+
  ul.loca li {
      color: #fcfbfb;
     padding: 0px 30px;
     font-size: 18px;
-  
+
 }
  ul.loca li a {
      padding-right: 16px;
@@ -1490,7 +1514,7 @@ flex-wrap: wrap;
      margin: 0px 4px;
 
 }
- 
+
  ul.social_link li a  {
     font-size: 24px;
 color: #161616;
@@ -1503,7 +1527,7 @@ height: 41px;
 justify-content: center;
 }
  ul.social_link li a:hover {
-    
+
  color: #fff;
 }
 
@@ -1519,7 +1543,7 @@ justify-content: center;
      font-size: 18px;
      line-height: 28px;
      text-align: center;
-   
+
 }
  .copyright a {
      color: #fff;
@@ -1533,7 +1557,7 @@ justify-content: center;
 
 .contineer_page .header {background: #656565; padding-bottom: 27px;     position: inherit;}
 
-.backgro_mh {background: #0ed1f0; }
+.backgro_mh {background: #000000; }
 .heding h2 {
      color: #fff;
 font-size: 60px;
